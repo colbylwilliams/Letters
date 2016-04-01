@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Letters", "Letters\Letters.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Letters.iOS", "Letters.iOS\Letters.iOS.csproj", "{991D410A-1861-4604-89ED-3D573670D915}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Letters.Unified", "Letters.Unified\Letters.Unified.shproj", "{2953A7CB-401A-429E-A95C-C9BD0B02C7DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

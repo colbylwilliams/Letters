@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>DefaultValue</key>
+			<string>0.1.1 (2)</string>
+			<key>Key</key>
+			<string>VersionNumber</string>
+			<key>Title</key>
+			<string>Version</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>0996813</string>
+			<key>Key</key>
+			<string>GitCommitHash</string>
+			<key>Title</key>
+			<string>Git Hash</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Letter Drawing</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>3</string>
+			<key>Key</key>
+			<string>LetterDrawDuration</string>
+			<key>Title</key>
+			<string>Letter Draw Duration</string>
+			<key>Titles</key>
+			<array>
+				<string>1 second</string>
+				<string>2 seconds</string>
+				<string>3 seconds</string>
+				<string>4 seconds</string>
+				<string>5 seconds</string>
+				<string>6 seconds</string>
+				<string>7 seconds</string>
+				<string>8 seconds</string>
+				<string>9 seconds</string>
+				<string>10 seconds</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Values</key>
+			<array>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>4</string>
+				<string>5</string>
+				<string>6</string>
+				<string>7</string>
+				<string>8</string>
+				<string>9</string>
+				<string>10</string>
+			</array>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>5</string>
+			<key>Key</key>
+			<string>LetterDrawDelay</string>
+			<key>Title</key>
+			<string>Next Letter Delay</string>
+			<key>Titles</key>
+			<array>
+				<string>1 second</string>
+				<string>2 seconds</string>
+				<string>3 seconds</string>
+				<string>4 seconds</string>
+				<string>5 seconds</string>
+				<string>6 seconds</string>
+				<string>7 seconds</string>
+				<string>8 seconds</string>
+				<string>9 seconds</string>
+				<string>10 seconds</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Values</key>
+			<array>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>4</string>
+				<string>5</string>
+				<string>6</string>
+				<string>7</string>
+				<string>8</string>
+				<string>9</string>
+				<string>10</string>
+			</array>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<true/>
+			<key>Key</key>
+			<string>LetterDrawLoop</string>
+			<key>Title</key>
+			<string>Continuously Loop</string>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright © 2016 Colby Williams</string>
+			<key>Title</key>
+			<string>Diagnostics Key</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>ANONYMOUS</string>
+			<key>Key</key>
+			<string>UserReferenceKey</string>
+			<key>Title</key>
+			<string></string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+	</array>
+</dict>
+</plist>

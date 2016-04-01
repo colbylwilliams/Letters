@@ -8,14 +8,13 @@ using CoreGraphics;
 using CoreText;
 using Foundation;
 using UIKit;
+using Letters.Unified;
 
 namespace Letters.iOS
 {
 	public partial class ViewController : UIViewController
 	{
 		int currentLetter = -1;
-
-		double duration = 3.0;
 
 		List<string> alphabet;
 
@@ -40,6 +39,21 @@ namespace Letters.iOS
 		}
 
 
+		public override void DidReceiveMemoryWarning ()
+		{
+			// a littel excessive...? maybe
+			Console.WriteLine ("********** ********** ********** ********** ********** ********** ********** ********** **********");
+			Console.WriteLine ("********** ********** ********** ********** ********** ********** ********** ********** **********");
+			Console.WriteLine ("********** ********** ********** ********** ********** ********** ********** ********** **********");
+			Console.WriteLine ("********** ********** **********     DidReceive Memory Warning    ********** ********** **********");
+			Console.WriteLine ("********** ********** ********** ********** ********** ********** ********** ********** **********");
+			Console.WriteLine ("********** ********** ********** ********** ********** ********** ********** ********** **********");
+			Console.WriteLine ("********** ********** ********** ********** ********** ********** ********** ********** **********");
+
+			base.DidReceiveMemoryWarning ();
+		}
+
+
 		void clearLayer ()
 		{
 			pathLayer?.RemoveFromSuperLayer ();
@@ -57,9 +71,9 @@ namespace Letters.iOS
 			} else if (currentLetter == alphabet.Count) {
 				setupTextLayer ("All Done!");
 				startAnimation ();
-			} else {
+			} else if (Settings.LetterDrawLoop) {
 				currentLetter = -1;
-				clearLayer ();
+				incrementLetter ();
 			}
 		}
 
@@ -149,7 +163,7 @@ namespace Letters.iOS
 			var pathAnimation = CABasicAnimation.FromKeyPath ("strokeEnd");
 
 			pathAnimation.AnimationStopped += pathAnimationStopped;
-			pathAnimation.Duration = duration;
+			pathAnimation.Duration = Settings.LetterDrawDuration;
 			pathAnimation.From = NSObject.FromObject (0);
 			pathAnimation.To = NSObject.FromObject (1);
 
@@ -167,7 +181,7 @@ namespace Letters.iOS
 
 				pathLayer.FillColor = UIColor.Blue.CGColor;
 
-				await Task.Delay ((int)duration * 1000);
+				await Task.Delay (Settings.LetterDrawDelay * 1000);
 
 				incrementLetter ();
 			}

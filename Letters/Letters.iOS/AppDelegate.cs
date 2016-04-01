@@ -1,6 +1,7 @@
 ﻿using Foundation;
-
 using UIKit;
+
+using Letters.Unified;
 
 namespace Letters.iOS
 {
@@ -11,6 +12,8 @@ namespace Letters.iOS
 
 		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 		{
+			Bootstrap.Run ();
+
 			return true;
 		}
 	}
