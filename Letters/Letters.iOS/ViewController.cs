@@ -17,9 +17,7 @@ namespace Letters.iOS
 
 		double duration = 3.0;
 
-		List<string> alphabet = new List<string> { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
-												   "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
-												   "U", "V", "W", "X", "Y", "Z" };
+		List<string> alphabet;
 
 		CALayer animationLayer;
 
@@ -30,6 +28,9 @@ namespace Letters.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+
+			alphabet = Alphabet.Capitals;
+			//alphabet = Alphabet.Lowers;
 
 			animationLayer = new CALayer ();
 			animationLayer.Frame = new CGRect (0, 40.0, View.Layer.Bounds.Width, View.Layer.Bounds.Height - 84.0);
